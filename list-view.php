@@ -48,10 +48,10 @@ $obj=new operation;
 //}
 
   //midle add
-  $images = array('4.jpg', 'image1.jpg', 'image2.jpg','image3.jpg');
+  $images = array('home-bottom-Banner-1.jpg', 'list-bottom-Banner-1.jpg', 'image2.jpg','image3.jpg');
   $random_image = array_rand($images);   
 //bottom add
-  $vedio = array(SITE_URL.'assets/images/software-ad.svg','https://www.youtube.com/embed/VviXy2PANAc' );
+  $vedio = array(SITE_URL.'assets/midle/list-bottom-Banner-1.jpg','https://www.youtube.com/embed/VviXy2PANAc' );
   $random_vedio = array_rand($vedio);
 
 
@@ -154,10 +154,8 @@ li.page_info {
                   <!-- List Item Starts -->
                   <?php if (isset($query)) {   ?>
 
-                  <?php $i=1; foreach ($query as $value){
-
-
-                   ?>
+                  <?php $i=1; foreach ($query as $value){ ?>
+                     
                   <div class="service-details mb-30 wow fadeInUp" data-wow-delay=".2s">
                      <div class="content-body">
                       
@@ -227,7 +225,7 @@ li.page_info {
                      <a href="http://www.amarhms.com/"><img src="<?php echo SITE_URL; ?>assets/images/software-ad.jpg" alt="software-ad"></a>
                   </div>
                   <div class="service-details softwareadSection mb-30 wow fadeInUp" data-wow-delay=".2s">
-                     <a href="http://www.amarhms.com/"><img src="<?php echo SITE_URL; ?>assets/images/software-ad.jpg" alt="software-ad"></a>
+                     <a href="http://www.amarhms.com/"><img src="<?php echo SITE_URL; ?>assets/midle/Right-Banner-1.jpg" alt="software-ad"></a>
                   </div>
                   <div class="service-details softwareadSection mb-30 wow fadeInUp" data-wow-delay=".2s">
                      <a href="http://www.amarhms.com/"><img src="<?php echo SITE_URL; ?>assets/images/software-ad.jpg" alt="software-ad"></a>
@@ -239,8 +237,13 @@ li.page_info {
       <section>
        
         <div class="row justify-content-center align-items-center m-5">
+         <?php $ext = pathinfo($vedio[$random_vedio], PATHINFO_EXTENSION);
+            if($ext == 'jpg'){ ?>
+               <img width="420" height="420" src="<?php echo $vedio[$random_vedio]?>">
+            <?php }else{ ?>
           <iframe width="420" height="420" src="<?php echo $vedio[$random_vedio]?>">
           </iframe>
+         <?php } ?>
         </div>
       </section>
    </aside>

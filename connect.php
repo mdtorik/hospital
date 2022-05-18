@@ -8,7 +8,7 @@ $pass="";
 defined('DS') ? null : define('DS', DIRECTORY_SEPARATOR);
 defined('SITE_ROOT') ? null :
 define('SITE_ROOT', DS.'wamp64'.DS.'www'.DS.'directory2');
-defined('SITE_URL')   ? null : define("SITE_URL", "http://192.168.1.6/directory2/");
+defined('SITE_URL')   ? null : define("SITE_URL", "http://192.168.1.6/directory4/");
 
 //defined('SITE_URL')   ? null : define("SITE_URL", "http://localhost/directory2/");
 
@@ -29,7 +29,7 @@ $config = array(
 new \Pixie\Connection('mysql', $config, 'QB');
 require 'esadmin/class/common_helper.php';
 
-$PAGINATION_PERPAGE = 10;
+$PAGINATION_PERPAGE = 13;
 
 function pagination($query,$per_page=10,$page=1,$url='?') {   
  
